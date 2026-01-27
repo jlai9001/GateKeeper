@@ -7,6 +7,28 @@
     <title>Gate Keeper</title>
 </head>
 <body>
-    <%- body %>
+    <nav class="navbar">
+    <div class="nav-inner">
+        <div class="dropdown">
+        <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            Menu ▾
+        </button>
+        <div class="dropdown-menu" role="menu">
+            <a href="/" role="menuitem">Home</a>
+            <a href="/objective" role="menuitem">Objective</a>
+            <a href="/logic" role="menuitem">Logic</a>
+            <a href="/solar" role="menuitem">Solar</a>
+            <a href="/sensors" role="menuitem">Sensors</a>
+            <a href="/wiring" role="menuitem">Wiring</a>
+            <a href="/programming" role="menuitem">Programming</a>
+        </div>
+        </div>
+    </div>
+    </nav>
+
+    <main>
+        <%- body %>
+    </main>
 </body>
+
 </html>
