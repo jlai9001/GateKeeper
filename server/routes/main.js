@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Routes
 router.get('',(req,res)=> {
-    res.send("Gate Keeper");
+    res.render('index');
 })
 
 // export router
