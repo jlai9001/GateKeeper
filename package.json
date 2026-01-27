@@ -16,6 +16,9 @@
   },
   "type": "commonjs",
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-ejs-layouts": "^2.5.1",
+    "router": "^2.2.0"
   }
 }
