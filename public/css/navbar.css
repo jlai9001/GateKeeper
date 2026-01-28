@@ -17,6 +17,8 @@
 /* ===== Dropdown ===== */
 .dropdown {
   position: relative;
+  font-family: Arial,sans-serif;
+  font-weight:300;
 }
 
 .dropdown-toggle {
@@ -36,7 +38,8 @@
   left: 50%;
   transform: translateX(-50%);
   min-width: 220px;
-  background: #ffffff;
+  background: #ffffff73;
+  backdrop-filter: blur(10px);
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.10);
