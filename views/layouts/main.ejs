@@ -2,33 +2,42 @@
 <html lang="en">
 <head>
     <link rel="icon" type="image/png" href="/images/home/GateKeeper_Icon.png">
+    <!-- navbar styling -->
+    <link rel="stylesheet" href="/css/navbar.css">
+    <!-- footer styling -->
+    <link rel="stylesheet" href="/css/footer.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gate Keeper</title>
 </head>
 <body>
     <nav class="navbar">
-    <div class="nav-inner">
-        <div class="dropdown">
-        <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-            Menu ▾
-        </button>
-        <div class="dropdown-menu" role="menu">
-            <a href="/" role="menuitem">Home</a>
-            <a href="/objective" role="menuitem">Objective</a>
-            <a href="/logic" role="menuitem">Logic</a>
-            <a href="/solar" role="menuitem">Solar</a>
-            <a href="/sensors" role="menuitem">Sensors</a>
-            <a href="/wiring" role="menuitem">Wiring</a>
-            <a href="/programming" role="menuitem">Programming</a>
+        <div class="nav-inner">
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                    Menu ▾
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a href="/" role="menuitem">Home</a>
+                    <a href="/objective" role="menuitem">1. Objective</a>
+                    <a href="/logic" role="menuitem">2. Logic</a>
+                    <a href="/solar" role="menuitem">3. Solar</a>
+                    <a href="/sensors" role="menuitem">4. Sensors</a>
+                    <a href="/wiring" role="menuitem">5. Wiring</a>
+                    <a href="/programming" role="menuitem">6. Programming</a>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
     </nav>
-
     <main>
         <%- body %>
     </main>
+
+    <footer class="footer">
+        Designed and Built by Jonathan Lai
+    </footer>
+
+    <script src="/js/navbar.js"></script>
 </body>
 
 </html>
