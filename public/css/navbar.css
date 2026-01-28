@@ -2,7 +2,7 @@
 /* ===== Navbar base ===== */
 .navbar {
   width: 100%;
-  padding: 16px 0;
+  padding: 10px 0;
   margin-bottom:30px;
   background-color: #111827;
 }
@@ -23,7 +23,7 @@
 
 .dropdown-toggle {
   cursor: pointer;
-  padding: 5px 82px;
+  padding: 5px 60px;
   border: 1px solid #d1d5db;
   border-radius: 10px;
   background: #ffffff;
