@@ -1,0 +1,50 @@
+html,body{
+  margin:0;
+  padding:0;
+  height:100%;
+  background-color: black;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page{
+  flex:1;
+}
+
+
+
+.objective-heading{
+    color:white;
+    font-family: "Goldman", sans-serif;
+    padding-left:100px;
+    font-size:60px;
+    font-weight:800;
+    background-color: rgb(33, 33, 33);
+    width:100%;
+}
+
+.objective-text{
+    color:white;
+    font-family: "Arial", sans-serif;
+    font-size:25px;
+    font-weight:800;
+    margin-top:20px;
+    margin-left:200px;
+}
+
+.objective-subtext{
+    color:white;
+    font-family: "Arial", sans-serif;
+    font-size:20px;
+    font-weight:400;
+    margin-top:20px;
+}
+
+.remote-beacon{
+    height:auto;
+    max-width:300px;
+}

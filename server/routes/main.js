@@ -7,8 +7,8 @@ router.get('',(req,res)=> {
     res.render('index');
 })
 
-router.get('/objective',(req,res)=> {
-    res.render('pages/objective');
+router.get('/objectives',(req,res)=> {
+    res.render('pages/objectives');
 })
 
 router.get('/logic',(req,res)=> {
