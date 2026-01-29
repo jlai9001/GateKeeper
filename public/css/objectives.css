@@ -48,7 +48,7 @@ body {
 
 .objectives-tagline {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: rgb(190, 190, 190);
   margin: 8px auto 0;
@@ -95,7 +95,7 @@ body {
 }
 
 .objective-summary:hover {
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(41, 41, 41);
 }
 
 .objective-summary:focus-visible {
@@ -106,7 +106,7 @@ body {
 .objective-summary-left {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
   min-width: 0;
 }
 
@@ -129,7 +129,7 @@ body {
 
 .objective-name {
   font-family: Arial, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 800;
   color: white;
   white-space: nowrap;
@@ -139,7 +139,7 @@ body {
 
 .objective-short {
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   color: rgb(185, 185, 185);
   white-space: nowrap;
@@ -171,7 +171,7 @@ body {
   margin: 0;
   padding-left: 18px;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: rgb(230, 230, 230);
   line-height: 1.65;
