@@ -1,130 +1,132 @@
-<link rel="stylesheet" href="css/objectives.css">
+<link rel="stylesheet" href="/css/objectives.css">
 
+<section class="objectives-page" aria-label="Gate Keeper Objectives">
+  <header class="objectives-header">
+    <h1 class="objectives-title">Objectives</h1>
+    <p class="objectives-tagline">Tap an item to view details.</p>
+  </header>
 
-<main class="page">
-    <div class="objective-heading">Objectives</div>
-        <li class="objective-text">
-            Completely automate the opening and shutting procedures for the front gate.
-            <!-- remote picture -->
-            <ul>
-                <img class="remote-beacon" src="images/objectives/RemoteToBeacon.png" alt="GateRemote" />
-            </ul>
+  <div class="objectives-list">
+    <details class="objective-card">
+      <summary class="objective-summary">
+        <div class="objective-summary-left">
+          <img class="objective-thumb" src="/images/objectives/RemoteToBeacon.png" alt="Remote and beacon illustration" />
+          <div class="objective-summary-text">
+            <span class="objective-name">Fully automate gate opening and shutting</span>
+            <span class="objective-short">Presence detection + state tracking</span>
+          </div>
+        </div>
+        <span class="objective-chevron" aria-hidden="true">▾</span>
+      </summary>
 
-            <ol class="objective-subtext">
-                Use bluetooth beacons to detect the presence and absence of vehicles.
-            </ol>
+      <div class="objective-body">
+        <ul class="objective-points">
+          <li>Use Bluetooth beacons to detect the presence and absence of vehicles.</li>
+          <li>Use limit switches to detect the physical state of the gate.</li>
+          <li>Use programmable micro-controllers to act on varying conditions.</li>
+        </ul>
+      </div>
+    </details>
 
-            <ol class="objective-subtext">
-                Use limit switches to detect the physical state of the gate.
-            </ol>
+    <details class="objective-card">
+      <summary class="objective-summary">
+        <div class="objective-summary-left">
+          <img class="objective-thumb" src="/images/objectives/ObstacleDetect.png" alt="Obstacle detection illustration" />
+          <div class="objective-summary-text">
+            <span class="objective-name">Obstacle detection safety</span>
+            <span class="objective-short">Prevent closing when blocked</span>
+          </div>
+        </div>
+        <span class="objective-chevron" aria-hidden="true">▾</span>
+      </summary>
 
-            <ol class="objective-subtext">
-                Use programmable micro-controllers to act on varying conditions.
-            </ol>
+      <div class="objective-body">
+        <ul class="objective-points">
+          <li>Prevent the gate from shutting when an obstacle is detected.</li>
+          <li>Open the gate if an obstacle is detected while shutting.</li>
+        </ul>
+      </div>
+    </details>
 
-            <br>
+    <details class="objective-card">
+      <summary class="objective-summary">
+        <div class="objective-summary-left">
+          <img class="objective-thumb" src="/images/objectives/ManualOverride.png" alt="Manual override illustration" />
+          <div class="objective-summary-text">
+            <span class="objective-name">Adapt to manual overrides</span>
+            <span class="objective-short">Resume automation from the new state</span>
+          </div>
+        </div>
+        <span class="objective-chevron" aria-hidden="true">▾</span>
+      </summary>
 
-        </li>
+      <div class="objective-body">
+        <ul class="objective-points">
+          <li>If a human operates the gate via app or remote, the system tracks the change.</li>
+          <li>After manual operation, automated operations resume from the new state.</li>
+        </ul>
+      </div>
+    </details>
 
-        <li class="objective-text">
-            Use safety sensors to monitor the presence of obstacles.
-            <!-- obstacle picture -->
-            <ul>
-                <img class="obstacle-detect" src="images/objectives/ObstacleDetect.png" alt="Obstacle" />
-            </ul>
+    <details class="objective-card">
+      <summary class="objective-summary">
+        <div class="objective-summary-left">
+          <img class="objective-thumb" src="/images/objectives/ClockTimer.png" alt="Real-time clock module illustration" />
+          <div class="objective-summary-text">
+            <span class="objective-name">Scheduled operation</span>
+            <span class="objective-short">RTC-based routines</span>
+          </div>
+        </div>
+        <span class="objective-chevron" aria-hidden="true">▾</span>
+      </summary>
 
-            <ol class="objective-subtext">
-                Prevent the gate from shutting when an obstacle is detected.
-            </ol>
+      <div class="objective-body">
+        <ul class="objective-points">
+          <li>Keep the gate open for gardener and pool cleaner.</li>
+          <li>Automatically adjust for daylight savings time.</li>
+          <li>Sync with an internet-based clock for accuracy.</li>
+        </ul>
+      </div>
+    </details>
 
-            <ol class="objective-subtext">
-                Open the gate if an obstacle is detected while shutting.
-            </ol>
+    <details class="objective-card">
+      <summary class="objective-summary">
+        <div class="objective-summary-left">
+          <img class="objective-thumb" src="/images/objectives/SolarEnergy.png" alt="Solar energy illustration" />
+          <div class="objective-summary-text">
+            <span class="objective-name">100% solar powered</span>
+            <span class="objective-short">Off-grid autonomy</span>
+          </div>
+        </div>
+        <span class="objective-chevron" aria-hidden="true">▾</span>
+      </summary>
 
-            <br>
+      <div class="objective-body">
+        <ul class="objective-points">
+          <li>Minimum autonomy length of 5 days.</li>
+          <li>Completely self-sustaining without power from the home.</li>
+        </ul>
+      </div>
+    </details>
 
-        </li>
+    <details class="objective-card">
+      <summary class="objective-summary">
+        <div class="objective-summary-left">
+          <img class="objective-thumb" src="/images/objectives/Raining.png" alt="Outdoor operation illustration" />
+          <div class="objective-summary-text">
+            <span class="objective-name">Continuous outdoor operation</span>
+            <span class="objective-short">Weather-proofing requirements</span>
+          </div>
+        </div>
+        <span class="objective-chevron" aria-hidden="true">▾</span>
+      </summary>
 
-        <li class="objective-text">
-            Needs to dynamically adapt to manual control overides.
-
-            <!-- Manual Overide -->
-            <ul>
-                <img class="manual-override" src="images/objectives/ManualOverride.png" alt="Obstacle" />
-            </ul>
-
-            <ol class="objective-subtext">
-                If a human operates the gate via app or remote, the gate needs to track the change.
-            </ol>
-
-            <ol class="objective-subtext">
-                After manual operation, automated operations need to resume from the new state.
-            </ol>
-
-            <br>
-        </li>
-
-
-
-        <li class="objective-text">
-            Use real-time clock to operate on preset schedules.
-
-            <!-- Manual Overide -->
-            <ul>
-                <img class="clock-timer" src="images/objectives/ClockTimer.png" alt="ClockTimer" />
-            </ul>
-
-            <ol class="objective-subtext">
-                Keep the gate open for gardener and pool cleaner.
-            </ol>
-
-            <ol class="objective-subtext">
-                Automatically adjust for daylight savings time.
-            </ol>
-
-            <ol class="objective-subtext">
-                Synced with an internet based clock for perfect accuracy.
-            </ol>
-
-            <br>
-        </li>
-
-
-        <li class="objective-text">
-            Power the system using 100% solar energy.
-
-            <!-- Manual Overide -->
-            <ul>
-                <img class="solar-energy" src="images/objectives/SolarEnergy.png" alt="SolarEnergy" />
-            </ul>
-
-            <ol class="objective-subtext">
-                System needs to have a minimum autonomy length of 5 days.
-            </ol>
-
-            <ol class="objective-subtext">
-                Completely self-sustaining without power from the home.
-            </ol>
-
-            <br>
-        </li>
-
-        <li class="objective-text">
-            Designed for continous outdoor operation.
-
-            <!-- Weatherproof -->
-            <ul>
-                <img class="raining" src="images/objectives/Raining.png" alt="Raining" />
-            </ul>
-
-            <ol class="objective-subtext">
-                All electronics must be storned in a weather-proof container.
-            </ol>
-
-            <ol class="objective-subtext">
-                All electrical connections must be weather proof.
-            </ol>
-        </li>
-
-
-</main>
+      <div class="objective-body">
+        <ul class="objective-points">
+          <li>All electronics must be stored in a weather-proof container.</li>
+          <li>All electrical connections must be weather-proof.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
