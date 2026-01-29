@@ -5,22 +5,21 @@
     <div class="objective-heading">Objectives</div>
         <li class="objective-text">
             Completely automate the opening and shutting procedures for the front gate.
-            <ul>
             <!-- remote picture -->
-            <img class="remote-beacon" src="images/objectives/RemoteToBeacon.png" alt="GateRemote" />
-
+            <ul>
+                <img class="remote-beacon" src="images/objectives/RemoteToBeacon.png" alt="GateRemote" />
             </ul>
 
             <ol class="objective-subtext">
-                Use bluetooth beacons to detect both the presence and absence of vehicles.
+                Use bluetooth beacons to detect the presence and absence of vehicles.
             </ol>
 
             <ol class="objective-subtext">
-                Use limit switches to detect the current state of the gate.
+                Use limit switches to detect the physical state of the gate.
             </ol>
 
             <ol class="objective-subtext">
-                Use a programmable micro-controller to act on certain conditions.
+                Use programmable micro-controllers to act on varying conditions.
             </ol>
 
             <br>
@@ -29,22 +28,92 @@
 
         <li class="objective-text">
             Use safety sensors to monitor the presence of obstacles.
+            <!-- obstacle picture -->
+            <ul>
+                <img class="obstacle-detect" src="images/objectives/ObstacleDetect.png" alt="Obstacle" />
+            </ul>
+
+            <ol class="objective-subtext">
+                Prevent the gate from shutting when an obstacle is detected.
+            </ol>
+
+            <ol class="objective-subtext">
+                Open the gate if an obstacle is detected while shutting.
+            </ol>
+
+            <br>
+
         </li>
 
         <li class="objective-text">
-            Allow the system to dynamically adapt to manual control overides.
+            Needs to dynamically adapt to manual control overides.
+
+            <!-- Manual Overide -->
+            <ul>
+                <img class="manual-override" src="images/objectives/ManualOverride.png" alt="Obstacle" />
+            </ul>
+
+            <ol class="objective-subtext">
+                If a human operates the gate via app or remote, the gate needs to track the change.
+            </ol>
+
+            <ol class="objective-subtext">
+                After manual operation, automated operations need to resume from the new state.
+            </ol>
+
+            <br>
         </li>
 
+
+
         <li class="objective-text">
-            Use real-time clock to open and close on preset schedules.
+            Use real-time clock to operate on preset schedules.
+
+            <!-- Manual Overide -->
+            <ul>
+                <img class="clock-timer" src="images/objectives/ClockTimer.png" alt="ClockTimer" />
+            </ul>
+
+            <ol class="objective-subtext">
+                Keep the gate open for gardener and pool cleaner.
+            </ol>
+
+            <ol class="objective-subtext">
+                Automatically adjust for daylight savings time.
+            </ol>
+
+            <ol class="objective-subtext">
+                Synced with an internet based clock for perfect accuracy.
+            </ol>
+
+            <br>
         </li>
+
 
         <li class="objective-text">
             Power the system using 100% solar energy.
+
+            <ol class="objective-subtext">
+                System needs to have a minimum autonomy length of 3 days.
+            </ol>
+
+            <ol class="objective-subtext">
+                Completely self-sustaining without power from the home.
+            </ol>
+
+            <br>
         </li>
 
         <li class="objective-text">
-            The system must be 100% weatherproof.
+            Designed for continous outdoor operation.
+
+            <ol class="objective-subtext">
+                All electronics must be storned in a weather-proof container.
+            </ol>
+
+            <ol class="objective-subtext">
+                All electrical connections must be weather proof.
+            </ol>
         </li>
 
 
