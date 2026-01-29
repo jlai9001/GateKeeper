@@ -40,6 +40,7 @@ body {
   font-family: "Goldman", sans-serif;
   font-size: 58px;
   font-weight: 800;
+  text-align: center;
   letter-spacing: 1px;
   margin: 0 auto;
   max-width: 1000px;
@@ -50,6 +51,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
+  text-align: center;
   color: rgb(190, 190, 190);
   margin: 8px auto 0;
   max-width: 1000px;
@@ -191,8 +193,9 @@ body {
   }
 
   .objectives-tagline {
+    margin-top: 5px;
     padding: 0 16px;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .objectives-list {
@@ -211,11 +214,15 @@ body {
   }
 
   .objective-name {
-    font-size: 18px;
+    font-size: 16px;
+    white-space: normal;         /* allow wrapping */
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;     /* prevents weird cutoffs on long words */
   }
 
   .objective-short {
-    font-size: 13px;
+    display:none;
   }
 
   .objective-body {
@@ -223,6 +230,8 @@ body {
   }
 
   .objective-points {
-    font-size: 15px;
+    font-size: 16px;
   }
+
+
 }
