@@ -1,30 +1,9 @@
-html,body{
-  margin:0;
-  padding:0;
-  height:100%;
-  background-color: black;
-}
-
-body{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.page{
-  flex:1;
-}
-
-
-h1{
-  color:white;
-}
 
 .home_hero{
   border-radius:20px;
   border: 5px solid rgb(79, 79, 79);
   display:flex;
-  margin:auto;
+  margin: 40px auto 10px;
   height:auto;
   max-width:600px;
 }

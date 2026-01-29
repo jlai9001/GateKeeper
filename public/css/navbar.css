@@ -5,6 +5,7 @@
   padding: 10px 0;
   margin-bottom:30px;
   background-color: #111827;
+  margin: 0;          /* remove drift */
 }
 
 .nav-inner {

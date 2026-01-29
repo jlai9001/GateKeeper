@@ -1,23 +1,4 @@
-/* =========================
-   Page base (match your other pages)
-   ========================= */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: black;
-}
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.page {
-  flex: 1;
-}
 
 /* =========================
    Objectives layout
@@ -53,7 +34,7 @@ body {
   font-weight: 400;
   text-align: center;
   color: rgb(190, 190, 190);
-  margin: 8px auto 0;
+  margin: 8px auto 8px;
   max-width: 1000px;
   padding: 0 24px;
 }
