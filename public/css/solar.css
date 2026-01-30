@@ -1,4 +1,49 @@
+
+/* =========================
+    Logic layout
+   ========================= */
+.solar-page {
+    color: white;
+    padding-bottom: 30px;
+}
+
+.solar-header {
+    width: 100%;
+    background-color: rgb(33, 33, 33);
+    border-top: 3px solid rgb(55, 55, 55);
+    border-bottom: 3px solid rgb(55, 55, 55);
+    padding: 18px 0 14px;
+    margin-bottom: 26px;
+    }
+
+.solar-title {
+    font-family: "Goldman", sans-serif;
+    font-size: 58px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 24px;
+}
+
+.solar-tagline {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(190, 190, 190);
+    margin: 8px auto 8px;
+    max-width: 1000px;
+    padding: 0 24px;
+}
+
+
 .solar_diagram{
+    display:flex;
+    margin:auto;
+    border-radius: 15px;
+    border: 3px solid rgb(80, 80, 80);
     height:600px;
     width:650px;
 }
