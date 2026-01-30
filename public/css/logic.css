@@ -1,4 +1,209 @@
-.logic_diagram{
-    height:600px;
-    width:800px;
+
+/* =========================
+   Objectives layout
+   ========================= */
+.logic-page {
+  color: white;
+  padding-bottom: 80px;
+}
+
+.logic-header {
+  width: 100%;
+  background-color: rgb(33, 33, 33);
+  border-top: 3px solid rgb(55, 55, 55);
+  border-bottom: 3px solid rgb(55, 55, 55);
+  padding: 18px 0 14px;
+  margin-bottom: 26px;
+}
+
+.logic-title {
+  font-family: "Goldman", sans-serif;
+  font-size: 58px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 24px;
+}
+
+.logic-tagline {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(190, 190, 190);
+  margin: 8px auto 8px;
+  max-width: 1000px;
+  padding: 0 24px;
+}
+
+.objectives-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* =========================
+   Accordion cards
+   ========================= */
+.objective-card {
+  background-color: rgb(18, 18, 18);
+  border: 3px solid rgb(55, 55, 55);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.objective-summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.objective-summary::-webkit-details-marker {
+  display: none;
+}
+
+.objective-summary::marker {
+  content: "";
+}
+
+.objective-summary:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.objective-summary:focus-visible {
+  outline: 2px solid rgb(160, 160, 160);
+  outline-offset: 2px;
+}
+
+.objective-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.objective-thumb {
+  width: 110px;
+  height: 90px;
+  border-radius: 12px;
+  border: 3px solid rgb(70, 70, 70);
+  background-color: rgb(10, 10, 10);
+  object-fit: fill;
+  flex: 0 0 auto;
+}
+
+.objective-summary-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.conditional-name {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.conditional-chevron {
+  font-size: 50px;
+  opacity: 0.8;
+  transition: transform 160ms ease;
+  flex: 0 0 auto;
+}
+
+.objective-card[open] .objective-summary {
+  background-color: rgb(24, 24, 24);
+}
+
+.objective-card[open] .objective-chevron {
+  transform: rotate(180deg);
+}
+
+.conditional-body {
+  border-top: 1px solid rgb(55, 55, 55);
+  padding: 14px 18px 16px;
+}
+
+.conditional-1 {
+  margin: 0;
+  padding-left: 18px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: rgb(230, 230, 230);
+  line-height: 1.65;
+}
+
+.conditional li {
+  margin: 6px 0;
+}
+
+/* =========================
+   Mobile overrides
+   ========================= */
+@media (max-width: 768px) {
+  .objectives-title {
+    font-size: 42px;
+    padding: 0 16px;
+  }
+
+  .objectives-tagline {
+    margin-top: 5px;
+    padding: 0 16px;
+    font-size: 18px;
+  }
+
+  .objectives-list {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .objective-summary {
+    padding: 14px 14px;
+  }
+
+  .objective-thumb {
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+  }
+
+  .objective-name {
+    font-size: 16px;
+    white-space: normal;         /* allow wrapping */
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;     /* prevents weird cutoffs on long words */
+  }
+
+  .objective-short {
+    display:none;
+  }
+
+  .objective-body {
+    padding: 12px 14px 14px;
+  }
+
+  .objective-points {
+    font-size: 16px;
+  }
+
+
 }
