@@ -38,7 +38,7 @@
   padding: 0 24px;
 }
 
-.objectives-list {
+.logic-list {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 24px;
@@ -50,14 +50,15 @@
 /* =========================
    Accordion cards
    ========================= */
-.objective-card {
-  background-color: rgb(18, 18, 18);
+.logic-card {
+
   border: 3px solid rgb(55, 55, 55);
   border-radius: 16px;
   overflow: hidden;
 }
 
-.objective-summary {
+.logic-summary {
+  background-color: rgb(31, 48, 31);
   list-style: none;
   cursor: pointer;
   user-select: none;
@@ -68,41 +69,31 @@
   gap: 14px;
 }
 
-.objective-summary::-webkit-details-marker {
+.logic-summary::-webkit-details-marker {
   display: none;
 }
 
-.objective-summary::marker {
+.logic-summary::marker {
   content: "";
 }
 
-.objective-summary:hover {
-  background-color: rgb(41, 41, 41);
+.logic-summary:hover {
+  background-color: rgb(69, 94, 70);
 }
 
-.objective-summary:focus-visible {
+.logic-summary:focus-visible {
   outline: 2px solid rgb(160, 160, 160);
   outline-offset: 2px;
 }
 
-.objective-summary-left {
+.logic-summary-left {
   display: flex;
   align-items: center;
   gap: 14px;
   min-width: 0;
 }
 
-.objective-thumb {
-  width: 110px;
-  height: 90px;
-  border-radius: 12px;
-  border: 3px solid rgb(70, 70, 70);
-  background-color: rgb(10, 10, 10);
-  object-fit: fill;
-  flex: 0 0 auto;
-}
-
-.objective-summary-text {
+.logic-summary-text {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -119,8 +110,6 @@
   text-overflow: ellipsis;
 }
 
-
-
 .conditional-chevron {
   font-size: 50px;
   opacity: 0.8;
@@ -128,27 +117,29 @@
   flex: 0 0 auto;
 }
 
-.objective-card[open] .objective-summary {
+.logic-card[open] .objective-summary {
   background-color: rgb(24, 24, 24);
 }
 
-.objective-card[open] .objective-chevron {
+.logic-card[open] .objective-chevron {
   transform: rotate(180deg);
 }
 
 .conditional-body {
-  border-top: 1px solid rgb(55, 55, 55);
-  padding: 14px 18px 16px;
+  border-top: 3px solid rgb(55, 55, 55);
+  background-color: rgb(42, 45, 40);
 }
 
-.conditional-1 {
-  margin: 0;
-  padding-left: 18px;
+.conditional {
   font-family: Arial, sans-serif;
   font-size: 24px;
   font-weight: 800;
   color: rgb(230, 230, 230);
-  line-height: 1.65;
+  margin:0;
+}
+
+.conditional:hover{
+   background-color: rgb(69, 94, 70);
 }
 
 .conditional li {
