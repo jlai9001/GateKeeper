@@ -166,23 +166,26 @@
 
 .logic-summary.nested-summary {
   padding: 15px 60px;
-  background:  rgb(102, 77, 77);
+  background:   #2d4067;
 }
 
 .logic-summary.nested-summary:hover{
-  background-color: rgb(176, 108, 108);
+  background-color:  #395baa;
 }
 
-.conditional-body.nested-body {
-  padding: 14px 60px 14px;
-  background-color: rgb(21, 38, 99);
-}
+
 
 .logic-result {
   font-family: Arial, sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
+
+.conditional-body.nested-body {
+  padding: 14px 60px 14px;
+  background-color: rgb(130, 48, 48);
+}
+
 
 /* =========================
    Mobile overrides
