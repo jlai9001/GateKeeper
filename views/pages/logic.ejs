@@ -6,8 +6,10 @@
         <h1 class="logic-title">Logic</h1>
         <p class="logic-tagline">Tap an item to view details.</p>
     </header>
-
     <div class="logic-list">
+
+        <!-- if the gate is shut -->
+
         <details class="logic-card">
             <summary class="logic-summary">
                 <div class="logic-summary-left">
@@ -18,11 +20,51 @@
                     <span class="conditional-chevron" aria-hidden="true">▾</span>
             </summary>
             <div class="conditional-body">
-                <ul class="conditional">
-                    <ul>and a valid beacon is detected</ul>
 
-                </ul>
-            </div>
+                <details class="logic-card nested">
+                    <summary class="logic-summary nested-summary">
+                    <div class="logic-summary-left">
+                        <div class="logic-summary-text">
+                        <div class="conditional-name-sub1">AND a valid beacon is detected OR a scheduled timer is active</div>
+                        </div>
+                    </div>
+                    <span class="conditional-chevron" aria-hidden="true">▾</span>
+                    </summary>
+
+                    <div class="conditional-body nested-body">
+                    <div class="logic-result">open the gate</div>
+                    </div>
+                </details>
+                </div>
+        </details>
+
+         <!-- if the gate is open-->
+
+        <details class="logic-card">
+            <summary class="logic-summary">
+                <div class="logic-summary-left">
+                    <div class="logic-summary-text">
+                        <span class="conditional-name">2. If the gate is open</span>
+                    </div>
+                </div>
+                    <span class="conditional-chevron" aria-hidden="true">▾</span>
+            </summary>
+            <div class="conditional-body">
+                <details class="logic-card nested">
+                    <summary class="logic-summary nested-summary">
+                    <div class="logic-summary-left">
+                        <div class="logic-summary-text">
+                        <div class="conditional-name-sub1">AND no valid beacons are detected AND no schedule is active AND no obstacles are detected</div>
+                        </div>
+                    </div>
+                    <span class="conditional-chevron" aria-hidden="true">▾</span>
+                    </summary>
+
+                    <div class="conditional-body nested-body">
+                    <div class="logic-result">shut the gate</div>
+                    </div>
+                </details>
+                </div>
         </details>
     </div>
 </section>

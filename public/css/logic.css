@@ -51,7 +51,6 @@
    Accordion cards
    ========================= */
 .logic-card {
-
   border: 3px solid rgb(55, 55, 55);
   border-radius: 16px;
   overflow: hidden;
@@ -110,6 +109,13 @@
   text-overflow: ellipsis;
 }
 
+.conditional-name-sub1 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  max-width:600px;
+}
+
 .conditional-chevron {
   font-size: 50px;
   opacity: 0.8;
@@ -146,55 +152,81 @@
   margin: 6px 0;
 }
 
+
+/* =========================
+   Nested dropdown styling
+   ========================= */
+
+.logic-card.nested {
+  margin-top: 14px;          /* space between first dropdown and second */
+  background: transparent;   /* prevent double-card look */
+  border: none;
+  box-shadow: none;
+}
+
+.logic-summary.nested-summary {
+  padding: 0px 18px;
+  background:  rgb(31, 48, 31);
+}
+
+.logic-summary.nested-summary:hover{
+  background-color: rgb(69, 94, 70);
+}
+.conditional-body.nested-body {
+  padding: 14px 18px 14px;
+  background-color: rgb(21, 38, 99);
+}
+
+.logic-result {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 /* =========================
    Mobile overrides
    ========================= */
 @media (max-width: 768px) {
-  .objectives-title {
+
+
+  .logic-title {
     font-size: 42px;
     padding: 0 16px;
   }
 
-  .objectives-tagline {
+  .logic-tagline {
     margin-top: 5px;
     padding: 0 16px;
     font-size: 18px;
   }
 
-  .objectives-list {
+  .logic-list {
     padding: 0 16px;
     gap: 12px;
   }
 
-  .objective-summary {
+  .logic-summary {
     padding: 14px 14px;
-  }
-
-  .objective-thumb {
-    width: 58px;
-    height: 58px;
-    border-radius: 10px;
-  }
-
-  .objective-name {
-    font-size: 16px;
-    white-space: normal;         /* allow wrapping */
-    overflow: visible;
-    text-overflow: clip;
-    overflow-wrap: anywhere;     /* prevents weird cutoffs on long words */
-  }
-
-  .objective-short {
-    display:none;
-  }
-
-  .objective-body {
-    padding: 12px 14px 14px;
   }
 
   .objective-points {
     font-size: 16px;
   }
 
+  .conditional-name {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conditional-name-sub1 {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
 
 }
