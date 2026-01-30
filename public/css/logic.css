@@ -152,7 +152,6 @@
   margin: 6px 0;
 }
 
-
 /* =========================
    Nested dropdown styling
    ========================= */
@@ -173,8 +172,6 @@
   background-color:  #395baa;
 }
 
-
-
 .logic-result {
   font-family: Arial, sans-serif;
   font-size: 20px;
@@ -185,7 +182,6 @@
   padding: 14px 60px 14px;
   background-color: rgb(130, 48, 48);
 }
-
 
 /* =========================
    Mobile overrides
