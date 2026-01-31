@@ -13,7 +13,6 @@
   border-top: 3px solid rgb(55, 55, 55);
   border-bottom: 3px solid rgb(55, 55, 55);
   padding: 18px 0 14px;
-  margin-bottom: 26px;
 }
 
 .objectives-title {
@@ -40,7 +39,7 @@
 
 .objectives-list {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 60px auto 0;
   padding: 0 24px;
   display: flex;
   flex-direction: column;
@@ -179,7 +178,8 @@
   }
 
   .objectives-list {
-    padding: 0 16px;
+    margin: 30px auto 0;
+    padding: 0 10px;
     gap: 12px;
   }
 
@@ -206,7 +206,7 @@
   }
 
   .objective-body {
-    padding: 12px 14px 14px;
+    padding: 12px 40px 14px;
   }
 
   .objective-points {
