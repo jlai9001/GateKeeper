@@ -1,0 +1,87 @@
+/* =========================
+   Electronics layout
+   ========================= */
+.electronics-page {
+  color: white;
+  padding-bottom: 80px;
+}
+
+.electronics-header {
+  width: 100%;
+  background:linear-gradient(rgb(31, 31, 31), rgb(15, 15, 15));
+  border-top: 3px solid rgb(55, 55, 55);
+  border-bottom: 3px solid rgb(55, 55, 55);
+  padding: 18px 0 14px;
+}
+
+.electronics-title {
+  font-family: "Goldman", sans-serif;
+  font-size: 58px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 24px;
+}
+
+
+/* electronics table */
+.electronics-table {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 80px auto 70px;
+    border: 5px solid rgb(161, 161, 161);
+    border-collapse: collapse; /* important for clean borders */
+    color: white;
+}
+
+.electronics-table td {
+    border: 5px solid rgb(161, 161, 161);
+    width: 600px;
+    text-align: center;
+}
+
+.component-name{
+  height:60px;
+}
+
+.picture-row{
+  height: 400px;
+}
+
+.description-row{
+  height: 100px;
+}
+
+.description-container{
+  display: flex;
+  justify-content: center;
+}
+
+.description-cell{
+  padding: 0 30px;
+  text-align: center;       /* centers inline/inline-block children */
+  vertical-align: middle;
+}
+
+/* The text block */
+.description-text{
+  margin: 0;
+  display: inline-block;    /* shrink-wrap */
+  text-align: left;         /* keep left aligned */
+  font-size: 18px;
+  max-width: 80%;
+
+}
+
+
+/* table pictures */
+.esp32-edge{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
