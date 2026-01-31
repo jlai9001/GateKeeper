@@ -63,8 +63,8 @@
 
 .solar-table td {
     border: 5px solid rgb(161, 161, 161);
-    height: 500px;
-    width: 600px;
+    height: 400px;
+    width: 500px;
     text-align: center;
 }
 
@@ -93,8 +93,8 @@
 
 .battery-table td {
     border: 5px solid rgb(161, 161, 161);
-    height: 500px;
-    width: 600px;
+    height: 400px;
+    width: 500px;
     text-align: center;
 }
 
@@ -155,7 +155,7 @@
 .calculation-table td {
     border: 5px solid rgb(161, 161, 161);
     height: 100px;
-    width: 600px;
+    width: 500px;
     text-align: center;
 }
 
@@ -168,4 +168,94 @@
     color:white;
     text-decoration: underline;
     margin-bottom: 30px;
+}
+
+
+/* =========================
+   Mobile layout: tables become 1 column
+   ========================= */
+@media (max-width: 768px) {
+  /* Make tables fit the screen */
+  .solar-table,
+  .battery-table,
+  .calculation-table {
+    width: calc(100% - 32px);
+    margin: 0 auto 50px;
+    font-size: 22px;
+    border-width: 2px;
+    border-collapse: separate; /* plays nicer once we switch to block layout */
+    border-spacing: 0;
+  }
+
+  /* Each row becomes a vertical “card” */
+  .solar-table tr,
+  .battery-table tr,
+  .calculation-table tr {
+    display: block;
+  }
+
+  /* Each cell becomes full-width (stacked) */
+  .solar-table td,
+  .battery-table td,
+  .calculation-table td {
+    display: block;
+    width: 100%;
+    height: auto;            /* let content decide height */
+    box-sizing: border-box;
+    border-width: 2px;
+    text-align: center;
+  }
+
+  /* TOP cell (image) — big enough for the photo */
+  .solar-table td:first-child,
+  .battery-table td:first-child {
+    height: min(70vw, 360px);  /* responsive + capped */
+    padding: 0;
+  }
+
+  /* BOTTOM cell (text) — just tall enough for text */
+  .solar-table td:last-child,
+  .battery-table td:last-child {
+    padding: 16px 10px;
+    line-height: 1.2;
+  }
+
+  .calculation-table {
+    width: calc(100% - 32px);
+    margin: 0 auto 50px;
+    table-layout: fixed;       /* helps keep columns consistent */
+    border-collapse: collapse; /* classic table look */
+  }
+
+  /* Undo the "stack to one column" behavior for calculation-table only */
+  .calculation-table tr {
+    display: table-row;
+  }
+
+  .calculation-table td {
+    display: table-cell;
+    width: auto;
+    height: auto;
+    padding: 10px 8px;         /* tighter so it fits */
+    font-size: 14px;           /* smaller text */
+    line-height: 1.15;
+    vertical-align: middle;
+    word-break: break-word;    /* prevent overflow */
+    white-space: normal;       /* allow wrapping */
+  }
+  /* Optional: reduce heading size a bit on mobile */
+  .solar-panel-heading,
+  .battery-heading,
+  .solar-system-heading,
+  .solar-calculation-heading {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  /* Solar diagram should also scale down on mobile */
+  .solar-diagram {
+    width: calc(100% - 32px);
+    height: auto;
+    max-width: 650px;
+  }
 }
