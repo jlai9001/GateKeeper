@@ -1,4 +1,3 @@
-
 /* =========================
     Logic layout
    ========================= */
@@ -9,7 +8,7 @@
 
 .solar-header {
     width: 100%;
-    background-color: rgb(33, 33, 33);
+    background:linear-gradient(rgb(31, 31, 31), rgb(15, 15, 15));
     border-top: 3px solid rgb(55, 55, 55);
     border-bottom: 3px solid rgb(55, 55, 55);
     padding: 18px 0 14px;
@@ -38,21 +37,60 @@
     padding: 0 24px;
 }
 
-/* solar table */
-
-.solar-panel-heading{
+/* =========================
+   Professional headings (styling only)
+   ========================= */
+.solar-panel-heading,
+.battery-heading,
+.solar-system-heading,
+.solar-calculation-heading {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:45px;
-    font-weight: bolder;
-    color:white;
-    text-decoration: underline;
-    margin-bottom: 30px;
+    font-family: "Goldman", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+
+    /* remove harsh underline */
+    text-decoration: none;
+
+    /* refined spacing */
+    margin: 0 auto 28px;
+    letter-spacing: 0.8px;
+    line-height: 1.05;
+
+    /* subtle depth */
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
+/* Keep your existing top spacing intent */
+.solar-system-heading,
+.solar-calculation-heading {
+    margin-top: 60px;
+}
+
+/* Underline replacement: clean divider */
+.solar-panel-heading::after,
+.battery-heading::after,
+.solar-system-heading::after,
+.solar-calculation-heading::after {
+    content: "";
+    display: block;
+    width: min(240px, 72%);
+    height: 3px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(190, 190, 190, 0.95),
+        rgba(255, 255, 255, 0)
+    );
+}
+
+/* solar table */
 .solar-table {
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     font-size: 30px;
     font-weight: 800;
     margin: 0 auto 70px;
@@ -69,26 +107,16 @@
 }
 
 /* battery table */
-
-.battery-heading{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:45px;
-    font-weight: bolder;
-    color:white;
-    text-decoration: underline;
-    margin-bottom: 30px;
-}
-
 .battery-table {
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     font-size: 30px;
     font-weight: 800;
     margin: 0 auto;
     border: 5px solid rgb(161, 161, 161);
     border-collapse: collapse; /* important for clean borders */
     color: white;
+    border-radius: 15px;
 }
 
 .battery-table td {
@@ -98,52 +126,39 @@
     text-align: center;
 }
 
-.solar-roof{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* fills, crops excess */
-  display: block;      /* removes the little baseline gap */
+.solar-roof {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fills, crops excess */
+    display: block;      /* removes the little baseline gap */
 }
 
-.solar-aux{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* fills, crops excess */
-  display: block;      /* removes the little baseline gap */
+.solar-aux {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fills, crops excess */
+    display: block;      /* removes the little baseline gap */
 }
 
-.battery{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* fills, crops excess */
-  display: block;      /* removes the little baseline gap */
+.battery {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fills, crops excess */
+    display: block;      /* removes the little baseline gap */
 }
 
-
-
-.solar-system-heading{
-    margin-top:60px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:45px;
-    font-weight: bolder;
-    color:white;
-    text-decoration: underline;
-    margin-bottom: 30px;
-}
-
-.solar-diagram{
-    display:flex;
-    margin:20px auto 100px;
+.solar-diagram {
+    display: flex;
+    margin: 20px auto 100px;
     border-radius: 15px;
     border: 3px solid rgb(80, 80, 80);
-    height:600px;
-    width:650px;
+    height: 600px;
+    width: 650px;
 }
 
 .calculation-table {
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     font-size: 30px;
     font-weight: 800;
     margin: 0 auto 50px;
@@ -159,17 +174,111 @@
     text-align: center;
 }
 
-.solar-calculation-heading{
-    margin-top:60px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:45px;
-    font-weight: bolder;
-    color:white;
-    text-decoration: underline;
-    margin-bottom: 30px;
+/* =========================================================
+   Round ONLY the OUTSIDE corners of each table
+   (works with border-collapse: collapse)
+   ========================================================= */
+
+.solar-table,
+.battery-table,
+.calculation-table {
+  border-radius: 15px;
+  overflow: hidden; /* clips cell backgrounds/images to the rounded corners */
 }
 
+/* Top-left corner */
+.solar-table tr:first-child td:first-child,
+.battery-table tr:first-child td:first-child,
+.calculation-table tr:first-child td:first-child {
+  border-top-left-radius: 15px;
+}
+
+/* Top-right corner */
+.solar-table tr:first-child td:last-child,
+.battery-table tr:first-child td:last-child,
+.calculation-table tr:first-child td:last-child {
+  border-top-right-radius: 15px;
+}
+
+/* Bottom-left corner */
+.solar-table tr:last-child td:first-child,
+.battery-table tr:last-child td:first-child,
+.calculation-table tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+
+/* Bottom-right corner */
+.solar-table tr:last-child td:last-child,
+.battery-table tr:last-child td:last-child,
+.calculation-table tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+/* =========================================================
+   Rounded OUTSIDE corners + outer border line stays visible
+   (no layout changes)
+   ========================================================= */
+
+.solar-table,
+.battery-table,
+.calculation-table {
+  --outer-b: 5px;                    /* matches your current border */
+  --outer-c: rgb(161, 161, 161);
+  --outer-r: 15px;
+
+  position: relative;
+  border-radius: var(--outer-r);
+  overflow: hidden;
+
+  border: none;                      /* outer border will be drawn by ::after */
+}
+
+/* Draw the outer border on top so it doesn't get clipped/weird */
+.solar-table::after,
+.battery-table::after,
+.calculation-table::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: var(--outer-b) solid var(--outer-c);
+  border-radius: var(--outer-r);
+  pointer-events: none;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* Keep your internal grid lines exactly the same */
+.solar-table td,
+.battery-table td,
+.calculation-table td {
+  border: 5px solid rgb(161, 161, 161);
+}
+
+/* Remove cell borders on the OUTSIDE perimeter
+   (prevents corner "dots" where borders overlap the rounded clip) */
+.solar-table tr:first-child td,
+.battery-table tr:first-child td,
+.calculation-table tr:first-child td {
+  border-top: 0;
+}
+
+.solar-table tr:last-child td,
+.battery-table tr:last-child td,
+.calculation-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.solar-table tr td:first-child,
+.battery-table tr td:first-child,
+.calculation-table tr td:first-child {
+  border-left: 0;
+}
+
+.solar-table tr td:last-child,
+.battery-table tr td:last-child,
+.calculation-table tr td:last-child {
+  border-right: 0;
+}
 
 /* =========================
    Mobile layout: tables become 1 column
@@ -243,13 +352,22 @@
     word-break: break-word;    /* prevent overflow */
     white-space: normal;       /* allow wrapping */
   }
-  /* Optional: reduce heading size a bit on mobile */
+
+  /* Mobile heading sizes (styling only) */
   .solar-panel-heading,
   .battery-heading,
   .solar-system-heading,
   .solar-calculation-heading {
     font-size: 34px;
     margin-bottom: 20px;
+  }
+
+  .solar-panel-heading::after,
+  .battery-heading::after,
+  .solar-system-heading::after,
+  .solar-calculation-heading::after {
+    height: 2px;
+    margin-top: 12px;
   }
 
   /* Solar diagram should also scale down on mobile */
