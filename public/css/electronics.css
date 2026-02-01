@@ -30,7 +30,6 @@
 .electronics-table {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
-    font-size: 25px;
     font-weight: 800;
     margin: 80px auto 70px;
     border: 5px solid rgb(161, 161, 161);
@@ -45,6 +44,7 @@
 }
 
 .component-name{
+  font-size: 18px;
   height:60px;
 }
 
@@ -52,8 +52,14 @@
   height: 400px;
 }
 
+.picture-row td{
+  height: 400px;
+  padding: 0;
+  overflow: hidden;
+}
+
 .description-row{
-  height: 100px;
+  height: 120px;
 }
 
 .description-container{
@@ -80,6 +86,41 @@
 
 /* table pictures */
 .esp32-edge{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.esp32-wroom{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.relay{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.gate-remote{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.buck-converter{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.rtc{
   width: 100%;
   height: 100%;
   object-fit: cover;   /* fills, crops excess */
