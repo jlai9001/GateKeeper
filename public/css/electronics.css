@@ -257,11 +257,16 @@
   background: rgb(15, 15, 15);
 }
 
+/* Desktop default: hide mobile layout */
+.electronics-mobile-list {
+  display: none;
+}
+
 /* Optional: slightly smaller on narrow screens */
 @media (max-width: 600px) {
   .electronics-zoom-wrap {
     width: calc(100% - 24px);
-    margin-top: 34px;
+    margin-top: 0px;
   }
 
   .electronics-zoom-header {
@@ -279,4 +284,64 @@
   .electronics-zoom-btn {
     padding: 7px 10px;
   }
+
+
+  /* ===== Mobile: replace desktop tables with vertical cards ===== */
+
+/* Hide desktop tables on mobile */
+.electronics-table-wrap {
+  display: none;
+}
+
+/* Show the mobile card list */
+.electronics-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: calc(100% - 24px);
+  margin: 20px auto;
+}
+
+.electronics-mobile-card {
+  border: 3px solid rgb(161, 161, 161);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgb(12, 12, 12);
+}
+
+.electronics-mobile-name {
+  padding: 14px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(rgb(31, 31, 31), rgb(15, 15, 15));
+  border-bottom: 5px solid rgb(161, 161, 161);
+}
+
+.electronics-mobile-img {
+  height: 260px;
+  background: rgb(0, 0, 0);
+}
+
+.electronics-mobile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.electronics-mobile-desc {
+  padding: 14px 16px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.35;
+  color: rgb(235, 235, 235);
+  background: rgb(18, 18, 18);
+}
+.electronics-zoom-wrap{
+  border: 3px solid rgb(161, 161, 161);
+}
+
 }
