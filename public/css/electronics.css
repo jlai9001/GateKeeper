@@ -28,20 +28,46 @@
 
 /* electronics table */
 .electronics-table {
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 1px;
-    font-weight: 800;
-    margin: 80px auto 70px;
-    border: 5px solid rgb(161, 161, 161);
-    border-collapse: collapse; /* important for clean borders */
-    color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 800;
+
+  margin: 0;                 /* wrapper handles spacing */
+  border: none;              /* wrapper handles outer border */
+
+  border-collapse: collapse; /* your inner grid lines stay crisp */
+  border-spacing: 0;
+
+  color: white;
 }
 
-.electronics-table td {
-    border: 5px solid rgb(161, 161, 161);
-    width: 600px;
-    text-align: center;
+/* Rounded outer shell that clips the table corners */
+.electronics-table-wrap{
+  width: fit-content;        /* shrink-wrap to table width (safe) */
+  margin: 80px auto 70px;    /* move margin from table to wrapper */
+
+  border: 5px solid rgb(161, 161, 161);
+  border-radius: 18px;
+  overflow: hidden;          /* THIS is what rounds the inside corners */
 }
+
+
+.electronics-table td {
+  border: 0;
+  width: 600px;
+  text-align: center;
+}
+
+/* Internal vertical lines (between columns only) */
+.electronics-table td:not(:last-child){
+  border-right: 5px solid rgb(161, 161, 161);
+}
+
+/* Internal horizontal lines (between rows only) */
+.electronics-table tr:not(:last-child) td{
+  border-bottom: 5px solid rgb(161, 161, 161);
+}
+
 
 .component-name{
   font-size: 18px;
