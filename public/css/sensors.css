@@ -1,0 +1,225 @@
+/* =========================
+   Sensors layout
+   ========================= */
+.sensors-page {
+  color: white;
+  padding-bottom: 80px;
+}
+
+.sensors-header {
+  width: 100%;
+  background:linear-gradient(rgb(31, 31, 31), rgb(15, 15, 15));
+  border-top: 3px solid rgb(55, 55, 55);
+  border-bottom: 3px solid rgb(55, 55, 55);
+  padding: 18px 0 14px;
+}
+
+.sensors-title {
+  font-family: "Goldman", sans-serif;
+  font-size: 58px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 24px;
+}
+
+
+/* sensors table */
+.sensors-table {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 800;
+
+  margin: 0;                 /* wrapper handles spacing */
+  border: none;              /* wrapper handles outer border */
+
+  border-collapse: collapse; /* your inner grid lines stay crisp */
+  border-spacing: 0;
+
+  color: white;
+}
+
+/* Rounded outer shell that clips the table corners */
+.sensors-table-wrap{
+  width: fit-content;        /* shrink-wrap to table width (safe) */
+  margin: 80px auto 70px;    /* move margin from table to wrapper */
+
+  border: 5px solid rgb(161, 161, 161);
+  border-radius: 18px;
+  overflow: hidden;          /* THIS is what rounds the inside corners */
+}
+
+
+.sensors-table td {
+  border: 0;
+  width: 600px;
+  text-align: center;
+}
+
+/* Internal vertical lines (between columns only) */
+.sensors-table td:not(:last-child){
+  border-right: 5px solid rgb(161, 161, 161);
+}
+
+/* Internal horizontal lines (between rows only) */
+.sensors-table tr:not(:last-child) td{
+  border-bottom: 5px solid rgb(161, 161, 161);
+}
+
+
+.component-name{
+  font-size: 18px;
+  height:60px;
+}
+
+.picture-row{
+  height: 400px;
+}
+
+.picture-row td{
+  height: 400px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.description-row{
+  height: 120px;
+}
+
+.description-container{
+  display: flex;
+  justify-content: center;
+}
+
+.description-cell{
+  padding: 0 30px;
+  text-align: center;       /* centers inline/inline-block children */
+  vertical-align: middle;
+}
+
+/* The text block */
+.description-text{
+  margin: 0;
+  display: inline-block;    /* shrink-wrap */
+  text-align: left;         /* keep left aligned */
+  font-size: 18px;
+  max-width: 80%;
+
+}
+
+
+/* table pictures */
+.beacon{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.esp32-wroom{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.relay{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.gate-remote{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.buck-converter{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+.rtc{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills, crops excess */
+  display: block;      /* removes the little baseline gap */
+}
+
+
+
+/* Desktop default: hide mobile layout */
+.sensors-mobile-list {
+  display: none;
+}
+
+/* Optional: slightly smaller on narrow screens */
+@media (max-width: 600px) {
+
+  /* ===== Mobile: replace desktop tables with vertical cards ===== */
+
+  /* Hide desktop tables on mobile */
+    .sensors-table-wrap {
+      display: none;
+    }
+
+    /* Show the mobile card list */
+    .sensors-mobile-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: calc(100% - 24px);
+      margin: 20px auto;
+    }
+
+    .sensors-mobile-card {
+      border: 3px solid rgb(161, 161, 161);
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgb(12, 12, 12);
+    }
+
+    .sensors-mobile-name {
+      padding: 14px 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-align: center;
+      background: linear-gradient(rgb(31, 31, 31), rgb(15, 15, 15));
+      border-bottom: 5px solid rgb(161, 161, 161);
+    }
+
+    .sensors-mobile-img {
+      height: 260px;
+      background: rgb(0, 0, 0);
+    }
+
+    .sensors-mobile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .sensors-mobile-desc {
+      padding: 14px 16px 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      line-height: 1.35;
+      color: rgb(235, 235, 235);
+      background: rgb(18, 18, 18);
+    }
+
+    .sensors-zoom-wrap{
+      border: 3px solid rgb(161, 161, 161);
+    }
+
+}
