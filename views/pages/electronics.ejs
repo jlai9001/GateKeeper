@@ -7,90 +7,117 @@
     <div class="electronics-title">Electronics</div>
   </header>
 
-<table class="electronics-table">
-  <tr class="component-name">
-    <td> ESP32 EDGE by DFROBOT </td>
-    <td> ESP32 WROOM DEV Module </td>
-  </tr>
+  <table class="electronics-table">
+    <tr class="component-name">
+      <td> ESP32 EDGE by DFROBOT </td>
+      <td> ESP32 WROOM DEV Module </td>
+    </tr>
 
-  <tr class="picture-row">
-    <td> <img class="esp32-edge" src="images/electronics/ESP32-Edge.png" alt="ESP32_Edge" /> </td>
-    <td> <img class="esp32-wroom" src="images/electronics/ESP32-WROOM.png" alt="ESP32_Edge" /> </td>
-  </tr>
+    <tr class="picture-row">
+      <td> <img class="esp32-edge" src="images/electronics/ESP32-Edge.png" alt="ESP32_Edge" /> </td>
+      <td> <img class="esp32-wroom" src="images/electronics/ESP32-WROOM.png" alt="ESP32_Edge" /> </td>
+    </tr>
 
-  <tr class="description-row">
-    <td class="description-cell">
-      <p class="description-text">
-        Primary microcontroller used for logic processing and for bluetooth beacon acquisition.
-      </p>
-    </td>
-    <td class="description-cell">
-      <p class="description-text">
-        Secondary microcontroller used for logic processing and rtc scheduled timers
-      </p>
-    </td>
-  </tr>
+    <tr class="description-row">
+      <td class="description-cell">
+        <p class="description-text">
+          Primary microcontroller used for logic processing and for bluetooth beacon acquisition.
+        </p>
+      </td>
+      <td class="description-cell">
+        <p class="description-text">
+          Secondary microcontroller used for logic processing and rtc scheduled timers
+        </p>
+      </td>
+    </tr>
 
-</table>
-
-
-<table class="electronics-table">
-  <tr class="component-name">
-    <td> Electronic Relay </td>
-    <td> Gate Remote PCB with DIP Switch Input </td>
-  </tr>
+  </table>
 
 
-
-  <tr class="picture-row">
-    <td> <img class="relay" src="images/electronics/Relay.png" alt="relay" /> </td>
-    <td> <img class="gate-remote" src="images/electronics/Remote_NoBatt.png" alt="gate_remote" /> </td>
-  </tr>
-
-
-  <tr class="description-row">
-    <td class="description-cell">
-      <p class="description-text">
-        Used for activating the gate remote by closing a bridging circuit with an input signal from the
-        microcontroller.
-      </p>
-    </td>
-    <td class="description-cell">
-      <p class="description-text">
-        Used to run gate operation. Modified to accept signals from electronic relay and power
-        from power supply.
-      </p>
-    </td>
-  </tr>
-</table>
-
-<table class="electronics-table">
-  <tr class="component-name">
-    <td> Buck Converter </td>
-    <td> DS3231 RTC Clock Module </td>
-  </tr>
-
-  <tr class="picture-row">
-    <td> <img class="buck-converter" src="images/electronics/BuckConverter.png" alt="BuckConverter" /> </td>
-    <td> <img class="rtc" src="images/electronics/RTC.png" alt="RTC" /> </td>
-  </tr>
-
-  <tr class="description-row">
-    <td class="description-cell">
-      <p class="description-text">
-        Used to down-convert voltages.
-      </p>
-    </td>
-    <td class="description-cell">
-      <p class="description-text">
-        Used to keep real time clock information in perfect sync.
-    </td>
-
-
-  </tr>
-</table>
+  <table class="electronics-table">
+    <tr class="component-name">
+      <td> Electronic Relay </td>
+      <td> Gate Remote PCB with DIP Switch Input </td>
+    </tr>
 
 
 
+    <tr class="picture-row">
+      <td> <img class="relay" src="images/electronics/Relay.png" alt="relay" /> </td>
+      <td> <img class="gate-remote" src="images/electronics/Remote_NoBatt.png" alt="gate_remote" /> </td>
+    </tr>
 
+
+    <tr class="description-row">
+      <td class="description-cell">
+        <p class="description-text">
+          Used for activating the gate remote by closing a bridging circuit with an input signal from the
+          microcontroller.
+        </p>
+      </td>
+      <td class="description-cell">
+        <p class="description-text">
+          Used to run gate operation. Modified to accept signals from electronic relay and power
+          from power supply.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <table class="electronics-table">
+    <tr class="component-name">
+      <td> Buck Converter </td>
+      <td> DS3231 RTC Clock Module </td>
+    </tr>
+
+    <tr class="picture-row">
+      <td> <img class="buck-converter" src="images/electronics/BuckConverter.png" alt="BuckConverter" /> </td>
+      <td> <img class="rtc" src="images/electronics/RTC.png" alt="RTC" /> </td>
+    </tr>
+
+    <tr class="description-row">
+      <td class="description-cell">
+        <p class="description-text">
+          Used to down-convert voltages.
+        </p>
+      </td>
+      <td class="description-cell">
+        <p class="description-text">
+          Used to keep real time clock information in perfect sync.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+
+  <!-- =========================
+      Zoom / Pan Image Viewer
+      (place below all tables)
+      ========================= -->
+  <section class="electronics-zoom-wrap" aria-label="Electronics diagram viewer">
+    <div class="electronics-zoom-header">
+      <h2 class="electronics-zoom-title">Wiring Diagram</h2>
+
+      <div class="electronics-zoom-controls" aria-label="Zoom controls">
+        <button type="button" id="electronicsZoomOut" class="electronics-zoom-btn" aria-label="Zoom out">−</button>
+        <button type="button" id="electronicsZoomIn" class="electronics-zoom-btn" aria-label="Zoom in">+</button>
+        <button type="button" id="electronicsZoomReset" class="electronics-zoom-btn electronics-zoom-btn-reset" aria-label="Reset view">Reset</button>
+      </div>
+    </div>
+
+    <div id="electronicsZoomViewport" class="electronics-zoom-viewport" role="region" aria-label="Zoomable image viewport">
+      <img
+        id="electronicsZoomImage"
+        class="electronics-zoom-image"
+        src="/images/electronics/Full-Electrical-Diagram.jpg"
+        alt="Electronics diagram"
+        draggable="false"
+      />
+    </div>
+
+    <p class="electronics-zoom-hint">
+      Scroll to zoom • Drag to pan • Pinch to zoom (touch)
+    </p>
+</section>
+  <script src="/js/electronics-zoompan.js"></script>
 </section>
