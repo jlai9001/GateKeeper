@@ -2,11 +2,9 @@
 
 <section class="sensors-page" aria-label="Gate Keeper Sensors">
 
-
   <header class="sensors-header">
     <div class="sensors-title">Sensors</div>
   </header>
-
 
   <div class="sensors-table-wrap">
     <table class="sensors-table">
@@ -17,7 +15,7 @@
 
       <tr class="picture-row">
         <td> <img class="beacon" src="images/sensors/Beacon.jpg" alt="Beacon" /> </td>
-        <td> <img class="esp32-wroom" src="images/electronics/ESP32-WROOM.png" alt="ESP32_Edge" /> </td>
+        <td> <img class="limit-1" src="images/sensors/Limit_1.jpg" alt="Limit_1" /> </td>
       </tr>
 
       <tr class="description-row">
@@ -28,7 +26,7 @@
         </td>
         <td class="description-cell">
           <p class="description-text">
-            Secondary microcontroller used for logic processing and rtc scheduled timers
+            Used to determine physical state of the gate. Either shut, open, or in transition.
           </p>
         </td>
       </tr>
@@ -37,53 +35,48 @@
 
   <div class="sensors-mobile-list">
     <article class="sensors-mobile-card">
-      <div class="sensors-mobile-name">ESP32 EDGE by DFROBOT</div>
+      <div class="sensors-mobile-name">Bluetooth Beacon</div>
       <div class="sensors-mobile-img">
-        <img src="images/electronics/ESP32-Edge.png" alt="ESP32_Edge" />
+        <img class="beacon" src="images/sensors/Beacon.jpg" alt="Beacon" />
       </div>
       <div class="sensors-mobile-desc">
-        Primary microcontroller used for logic processing and for bluetooth beacon acquisition.
+        Placed in vehicles for microcontroller to detect. Used to open or close the gate.
       </div>
     </article>
 
     <article class="sensors-mobile-card">
-      <div class="sensors-mobile-name">ESP32 WROOM DEV Module</div>
+      <div class="sensors-mobile-name">Limit Switch</div>
       <div class="sensors-mobile-img">
-        <img src="images/electronics/ESP32-WROOM.png" alt="ESP32_WROOM" />
+        <img class="limit-1" src="images/sensors/Limit_1.jpg" alt="Limit_1" />
       </div>
       <div class="sensors-mobile-desc">
-        Secondary microcontroller used for logic processing and rtc scheduled timers
+        Used to determine physical state of the gate. Either shut, open, or in transition.
       </div>
     </article>
   </div>
 
-
   <div class="sensors-table-wrap">
     <table class="sensors-table">
       <tr class="component-name">
-        <td> Electronic Relay </td>
-        <td> Gate Remote PCB with DIP Switch Input </td>
+        <td> Limit Switch </td>
+        <td> Infrared Sensor </td>
       </tr>
 
-
-
       <tr class="picture-row">
-        <td> <img class="relay" src="images/electronics/Relay.png" alt="relay" /> </td>
-        <td> <img class="gate-remote" src="images/electronics/Remote_NoBatt.png" alt="gate_remote" /> </td>
+        <td> <img class="limit-2" src="images/sensors/Limit_2.jpg" alt="Limit_1" /> </td>
+        <td> <img class="ir-1" src="images/sensors/IR_01.jpg" alt="ir_1" /> </td>
       </tr>
 
 
       <tr class="description-row">
         <td class="description-cell">
           <p class="description-text">
-            Used for activating the gate remote by closing a bridging circuit with an input signal from the
-            microcontroller.
+            Used to determine physical state of the gate. Either shut, open, or in transition.
           </p>
         </td>
         <td class="description-cell">
           <p class="description-text">
-            Used to run gate operation. Modified to accept signals from electronic relay and power
-            from power supply.
+            Used to detect physical obstructions from interfering with gate operations.
           </p>
         </td>
       </tr>
@@ -92,22 +85,22 @@
 
   <div class="sensors-mobile-list">
     <article class="sensors-mobile-card">
-      <div class="sensors-mobile-name">Electronic Relay</div>
+      <div class="sensors-mobile-name">Infrared Sensor</div>
       <div class="sensors-mobile-img">
-        <img src="images/electronics/Relay.png" alt="relay" />
+        <img src="images/sensors/IR_01.jpg" alt="ir-1" />
       </div>
       <div class="sensors-mobile-desc">
-        Used for activating the gate remote by closing a bridging circuit with an input signal from the microcontroller.
+        Used to detect physical obstructions from interfering with gate operations.
       </div>
     </article>
 
     <article class="sensors-mobile-card">
-      <div class="sensors-mobile-name">Gate Remote PCB with DIP Switch Input</div>
+      <div class="sensors-mobile-name">Infrared Sensor</div>
       <div class="sensors-mobile-img">
-        <img src="images/electronics/Remote_NoBatt.png" alt="gate_remote" />
+        <img src="images/sensors/IR_02.jpg" alt="ir-2" />
       </div>
       <div class="sensors-mobile-desc">
-        Used to run gate operation. Modified to accept signals from electronic relay and power from power supply.
+        Used to detect physical obstructions from interfering with gate operations.
       </div>
     </article>
   </div>
@@ -116,53 +109,21 @@
   <div class="sensors-table-wrap">
   <table class="sensors-table">
     <tr class="component-name">
-      <td> Buck Converter </td>
-      <td> DS3231 RTC Clock Module </td>
+      <td> Infrared Sensor </td>
     </tr>
 
     <tr class="picture-row">
-      <td> <img class="buck-converter" src="images/electronics/BuckConverter.png" alt="BuckConverter" /> </td>
-      <td> <img class="rtc" src="images/electronics/RTC.png" alt="RTC" /> </td>
+      <td> <img class="ir-2" src="images/sensors/IR_02.jpg" alt="ir_02" /> </td>
     </tr>
 
     <tr class="description-row">
       <td class="description-cell">
         <p class="description-text">
-          Used to down-convert voltages.
-        </p>
-      </td>
-      <td class="description-cell">
-        <p class="description-text">
-          Used to keep real time clock information in perfect sync.
+          Used to detect physical obstructions from interfering with gate operations.
         </p>
       </td>
     </tr>
   </table>
   </div>
-
-  <div class="sensors-mobile-list">
-    <article class="sensors-mobile-card">
-      <div class="sensors-mobile-name">Buck Converter</div>
-      <div class="sensors-mobile-img">
-        <img src="images/electronics/BuckConverter.png" alt="BuckConverter" />
-      </div>
-      <div class="sensors-mobile-desc">
-        Used to down-convert voltages.
-      </div>
-    </article>
-
-    <article class="sensors-mobile-card">
-      <div class="sensors-mobile-name">DS3231 RTC Clock Module</div>
-      <div class="sensors-mobile-img">
-        <img src="images/electronics/RTC.png" alt="RTC" />
-      </div>
-      <div class="sensors-mobile-desc">
-        Used to keep real time clock information in perfect sync.
-      </div>
-    </article>
-  </div>
-
-
-
 
 </section>

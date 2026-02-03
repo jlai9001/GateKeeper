@@ -118,28 +118,28 @@
   display: block;      /* removes the little baseline gap */
 }
 
-.esp32-wroom{
+.limit-1{
   width: 100%;
   height: 100%;
   object-fit: cover;   /* fills, crops excess */
   display: block;      /* removes the little baseline gap */
 }
 
-.relay{
+.limit-2{
   width: 100%;
   height: 100%;
   object-fit: cover;   /* fills, crops excess */
   display: block;      /* removes the little baseline gap */
 }
 
-.gate-remote{
+.ir-1{
   width: 100%;
   height: 100%;
   object-fit: cover;   /* fills, crops excess */
   display: block;      /* removes the little baseline gap */
 }
 
-.buck-converter{
+.ir-2{
   width: 100%;
   height: 100%;
   object-fit: cover;   /* fills, crops excess */
