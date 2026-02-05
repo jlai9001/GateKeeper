@@ -195,7 +195,8 @@ void init_lcd() {
   lcd.setCursor(0, 1);
   lcd.print("   Initializing...   ");
 
-  delay(3000);
+  // startup delay
+  delay(3000); 
   lcd.noBacklight();
   update_lcd(LCD_GATE_BEGIN);
 }
@@ -298,7 +299,9 @@ void open_gate() {
 void shut_gate() {
   remote_click();
   shutting();
-  delay(2000);
+  // short delay so ESP can restart to reset HEAP 
+  delay(1000);
+  ESP.restart();
 }
 
 bool int_delay(int ms) {
@@ -306,7 +309,7 @@ bool int_delay(int ms) {
   unsigned long t0 = millis();
 
   while (millis() - t0 <= (unsigned long)ms) {
-    if (check_beacon()) return false;
+    if (check_beacon() || check_ir()) return false;
     if (check_gate_state() != start) return false;
     delay(50);
     yield();
