@@ -158,6 +158,50 @@
   display: none;
 }
 
+/* =========================
+   Professional headings (styling only)
+   ========================= */
+.electronics-board-heading {
+    text-align: center;
+    font-family: "Goldman", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+
+    /* remove harsh underline */
+    text-decoration: none;
+
+    /* refined spacing */
+    margin: 0 auto 28px;
+    letter-spacing: 0.8px;
+    line-height: 1.05;
+
+    /* subtle depth */
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+/* Keep your existing top spacing intent */
+.electronics-board-heading {
+    margin-top: 60px;
+}
+
+/* Underline replacement: clean divider */
+.electronics-board-heading::after {
+    content: "";
+    display: block;
+    width: min(240px, 72%);
+    height: 3px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(190, 190, 190, 0.95),
+        rgba(255, 255, 255, 0)
+    );
+}
+
+
 @media (max-width: 600px) {
 
   /* ===== Mobile: replace desktop tables with vertical cards ===== */

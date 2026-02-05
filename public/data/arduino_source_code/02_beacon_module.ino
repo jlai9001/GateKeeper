@@ -180,7 +180,7 @@ void check_beacon() {
     if (active) {
         digitalWrite(BRIDGE_OUT, HIGH);
         led_on();
-    } 
+    }
     else {
         digitalWrite(BRIDGE_OUT, LOW);
         led_off();
