@@ -211,6 +211,9 @@
 }
 
 @media (max-width: 600px) {
+  .electronics-title{
+    font-size:35px;
+  }
 
   /* ===== Mobile: replace desktop tables with vertical cards ===== */
 

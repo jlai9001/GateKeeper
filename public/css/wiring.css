@@ -1,8 +1,24 @@
-.electrical_diagram{
-    height:600px;
-    width:800px;
+
+.wiring-header {
+    width: 100%;
+    background:linear-gradient(rgb(31, 31, 31), rgb(15, 15, 15));
+    border-top: 3px solid rgb(55, 55, 55);
+    border-bottom: 3px solid rgb(55, 55, 55);
+    padding: 18px 0 14px;
+    margin-bottom: 26px;
 }
 
+.wiring-title {
+    color: white;
+    font-family: "Goldman", sans-serif;
+    font-size: 58px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 24px;
+}
 
 /* =========================
    Professional headings (styling only)
@@ -154,6 +170,10 @@
 
 /* Optional: slightly smaller on narrow screens */
 @media (max-width: 600px) {
+  .wiring-title{
+    font-size:35px;
+  }
+
   .electronics-zoom-wrap {
     width: calc(100% - 24px);
     margin-top: 30px;

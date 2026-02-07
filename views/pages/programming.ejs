@@ -1,21 +1,104 @@
-<link rel="stylesheet" href="css/programming.css">
+<link rel="stylesheet" href="/css/programming.css">
 
 <section class="programming-page" aria-label="Gate Keeper Programming">
-    <header class="programming-header">
-        <h1 class="programming-title">Programming</h1>
-    </header>
+  <header class="programming-header">
+    <h1 class="programming-title">Programming</h1>
+  </header>
 
-    <div class="stylized-heading">
-        Main Controller Code
+  <!-- =========================
+       Main Controller
+       ========================= -->
+  <div class="code-section">
+    <div class="stylized-heading">Main Controller </div>
+
+    <div class="code-toolbar">
+      <button class="code-copy-btn" type="button" data-copy-target="code-main">
+        Copy
+      </button>
     </div>
 
-    <div class="stylized-heading">
-        Beacon Detector Code
+    <pre class="code-window" aria-label="Main Controller Source Code"><code id="code-main">Loading...</code></pre>
+  </div>
+
+  <!-- =========================
+       Beacon Detector
+       ========================= -->
+  <div class="code-section">
+    <div class="stylized-heading">Beacon Controller </div>
+
+    <div class="code-toolbar">
+      <button class="code-copy-btn" type="button" data-copy-target="code-beacon">
+        Copy
+      </button>
     </div>
 
-    <div class="stylized-heading">
-        Timer Code
+    <pre class="code-window" aria-label="Beacon Detector Source Code"><code id="code-beacon">Loading...</code></pre>
+  </div>
+
+  <!-- =========================
+       Timer
+       ========================= -->
+  <div class="code-section">
+    <div class="stylized-heading">Timer Controller </div>
+
+    <div class="code-toolbar">
+      <button class="code-copy-btn" type="button" data-copy-target="code-timer">
+        Copy
+      </button>
     </div>
 
+    <pre class="code-window" aria-label="Timer Source Code"><code id="code-timer">Loading...</code></pre>
+  </div>
 
 </section>
+
+<script>
+  // Loads your .ino files (they live in: /public/data/arduino_source_code/)
+  const CODE_FILES = [
+    { elId: "code-main",   url: "/data/arduino_source_code/01_main_module.ino" },
+    { elId: "code-beacon", url: "/data/arduino_source_code/02_beacon_module.ino" },
+    { elId: "code-timer",  url: "/data/arduino_source_code/03_external_timer.ino" },
+  ];
+
+  async function loadCode({ elId, url }) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const text = await res.text();
+      el.textContent = text; // textContent keeps code safe + unexecuted
+    } catch (err) {
+      el.textContent = `Failed to load: ${url}\n${String(err)}`;
+    }
+  }
+
+  CODE_FILES.forEach(loadCode);
+
+  // Copy button
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest(".code-copy-btn");
+    if (!btn) return;
+
+    const targetId = btn.getAttribute("data-copy-target");
+    const codeEl = document.getElementById(targetId);
+    if (!codeEl) return;
+
+    try {
+      await navigator.clipboard.writeText(codeEl.textContent || "");
+      const prev = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(() => (btn.textContent = prev), 900);
+    } catch {
+      // Fallback if clipboard is blocked
+      const range = document.createRange();
+      range.selectNodeContents(codeEl);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      btn.textContent = "Select + Ctrl/Cmd+C";
+      setTimeout(() => (btn.textContent = "Copy"), 1200);
+    }
+  });
+</script>

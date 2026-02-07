@@ -211,7 +211,9 @@
 
 /* Optional: slightly smaller on narrow screens */
 @media (max-width: 600px) {
-
+    .sensors-title{
+    font-size:35px;
+  }
   /* ===== Mobile: replace desktop tables with vertical cards ===== */
 
   /* Hide desktop tables on mobile */

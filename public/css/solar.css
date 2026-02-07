@@ -284,6 +284,10 @@
    Mobile layout: tables become 1 column
    ========================= */
 @media (max-width: 768px) {
+  .solar-title{
+    font-size:35px;
+  }
+
   /* Make tables fit the screen */
   .solar-table,
   .battery-table,
