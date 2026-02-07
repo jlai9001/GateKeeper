@@ -1,0 +1,66 @@
+/* =========================
+   Programming layout
+   ========================= */
+.programming-page {
+  color: white;
+  padding-bottom: 80px;
+}
+
+.programming-header {
+  width: 100%;
+  background:linear-gradient(rgb(31, 31, 31), rgb(15, 15, 15));
+  border-top: 3px solid rgb(55, 55, 55);
+  border-bottom: 3px solid rgb(55, 55, 55);
+  padding: 18px 0 14px;
+  margin-bottom: 26px;
+}
+
+.programming-title {
+  font-family: "Goldman", sans-serif;
+  font-size: 58px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 24px;
+}
+
+/* =========================
+   Professional headings (styling only)
+   ========================= */
+.stylized-heading{
+    text-align: center;
+    font-family: "Goldman", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+
+    /* remove harsh underline */
+    text-decoration: none;
+
+    /* refined spacing */
+    margin: 30px auto 28px;
+    letter-spacing: 0.8px;
+    line-height: 1.05;
+
+    /* subtle depth */
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+
+/* Underline replacement: clean divider */
+.stylized-heading::after {
+    content: "";
+    display: block;
+    width: min(240px, 72%);
+    height: 3px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(190, 190, 190, 0.95),
+        rgba(255, 255, 255, 0)
+    );
+}
