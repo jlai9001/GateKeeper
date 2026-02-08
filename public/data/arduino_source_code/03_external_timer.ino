@@ -9,8 +9,9 @@
 // WIFI / TIME
 // ======================================================
 
-const char* ssid     = "Lai Google";
-const char* password = "6265741554";
+// replace placeholder with your network SSID and network password
+const char* ssid     = "Wifi_SSID";
+const char* password = "Wifi_Password";
 
 const char* ntpServer = "pool.ntp.org";
 const char* timezone  = "PST8PDT,M3.2.0,M11.1.0";
@@ -95,10 +96,10 @@ uint8_t lastMinute = 255;
 // ======================================================
 
 const char* scheduleStrings[] = {
-  "MON 14:00-18:00",
-  "TUE 17:00-18:00",
-  "WED 17:00-18:00",
-  "THU 09:00-12:00",
+  // replace with your schedule
+  "MON 8:00-9:00",
+  "TUE 18:00-19:00",
+  "WED 7:00-8:00",
 };
 
 const int SCHEDULE_SIZE =

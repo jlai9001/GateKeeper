@@ -19,13 +19,12 @@ const int LED_BT = 15;
 // VALID BEACON MAC ADDRESSES (FIXED STRINGS – HEAP SAFE)
 
 const char* validBeacons[] = {
-    "DD:34:02:0B:1C:1B", // Jonathan
-    "DD:34:02:0B:19:D0", // Susan
-    "DD:88:00:00:0E:66", // Steven
-    "DD:34:02:0B:1C:70", // Steven
-    "DD:34:02:0B:18:94", // Keep Open
-    "DD:34:02:0B:1B:35", // Timer
-    "DD:34:02:0B:19:C5", // Tiffany
+    // replace placeholder with bluetooth beacon mac address
+    "Beacon-1-MacAddress", // Beacon1
+    "Beacon-2-MacAddress", // Beacon2
+    "Beacon-3-MacAddress", // Beacon3
+    "Beacon-4-MacAddress", // Beacon4
+
 };
 
 const int numValidBeacons = sizeof(validBeacons) / sizeof(validBeacons[0]);

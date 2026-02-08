@@ -35,6 +35,10 @@ router.get('/programming',(req,res)=> {
     res.render('pages/programming');
 })
 
+router.get('/video',(req,res)=> {
+    res.render('pages/video');
+})
+
 
 
 
