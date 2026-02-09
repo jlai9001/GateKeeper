@@ -21,9 +21,13 @@
     <nav class="navbar">
         <div class="nav-inner">
             <div class="dropdown">
+                <!-- dyanmic button text -->
+
                 <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-                    Navigation ▾
+                    <%= (typeof navLabel !== 'undefined' && navLabel) ? navLabel : 'Navigation' %> ▾
                 </button>
+
+
                 <div class="dropdown-menu" role="menu">
                     <a href="/" role="menuitem">Home</a>
                     <a href="/objectives" role="menuitem">1. Objectives</a>
