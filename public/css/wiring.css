@@ -188,7 +188,7 @@
   }
 
   .electronics-zoom-viewport {
-    height: min(520px, 30vh);
+    height: min(520px, 40vh);
   }
 
   .electronics-zoom-btn {
