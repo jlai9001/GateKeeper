@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "app.js",
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "keywords": [],
@@ -15,6 +15,9 @@
     "nodemon": "3.1.11"
   },
   "type": "commonjs",
+  "engines": {
+  "node": "22.x"
+  },
   "dependencies": {
     "dotenv": "^17.2.3",
     "ejs": "^4.0.1",
