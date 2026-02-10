@@ -47,8 +47,23 @@
   max-width:200px;
 }
 
+.link-container{
+  display:flex;
+  flex-direction: column;
+  margin:60px 0 0;
+  width:100%;
+}
 
+.repo-link{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight:700px;
+  font-size:20px;
+}
 
+a {
+  color:white;
+}
 /* mobile styles here */
 
 @media (max-width: 600px) {
