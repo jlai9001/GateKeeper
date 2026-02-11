@@ -196,7 +196,7 @@ void init_lcd() {
   lcd.print("   Initializing...   ");
 
   // startup delay
-  delay(3000); 
+  delay(3000);
   lcd.noBacklight();
   update_lcd(LCD_GATE_BEGIN);
 }
@@ -272,7 +272,7 @@ void remote_click() {
   digitalWrite(relay, HIGH);
   delay(500);
   digitalWrite(relay, LOW);
-  delay(500);
+  delay(100);
 }
 
 // ======================================================
@@ -280,14 +280,63 @@ void remote_click() {
 // ======================================================
 
 void shutting() {
-  while (check_gate_state() == GS_SHUTTING) {
-    check_lcd_light_button();
-    if (check_ir()) {
-      remote_click();
-      while (check_gate_state() != GS_OPEN) delay(100);
-      break;
+
+  // ------------------------------------------------------
+  // *** ADDED: Wait up to 3000ms for OPEN to release
+  //            (prevents auto-close from skipping safety)
+  // ------------------------------------------------------
+  unsigned long waitOpenDeadline = millis() + 3000;
+  while (check_gate_state() == GS_OPEN) {
+    if ((long)(millis() - waitOpenDeadline) >= 0) {
+      return; // never left OPEN; don't hang
     }
-  }  
+    delay(10);
+    yield();
+  }
+
+  // ------------------------------------------------------
+  // *** ADDED: Confirm we are actually SHUTTING or already SHUT
+  // ------------------------------------------------------
+  {
+    GateState g = check_gate_state();
+    if (g != GS_SHUTTING && g != GS_SHUT) return;
+  }
+
+  // ------------------------------------------------------
+  // Monitor while shutting
+  // ------------------------------------------------------
+  while (check_gate_state() == GS_SHUTTING) {
+
+    if (check_ir()) {
+      // Reverse
+      remote_click();
+
+      // ----------------------------------------------
+      // *** ADDED: Wait up to 3000ms for OPEN (timeout)
+      // ----------------------------------------------
+      unsigned long waitOpenAgainDeadline = millis() + 20000;
+      while (check_gate_state() != GS_OPEN) {
+        if ((long)(millis() - waitOpenAgainDeadline) >= 0) {
+          return; // gave up waiting to reach OPEN; don't hang
+        }
+        delay(10);
+        yield();
+      }
+
+      break; // done handling IR reversal
+    }
+
+    // *** ADDED: keep ESP32 healthy in long loop
+    delay(10);
+    yield();
+  }
+
+  // ------------------------------------------------------
+  // Reboot after ALL confirmed SHUTS (manual or automatic)
+  // ------------------------------------------------------
+  if (check_gate_state() == GS_SHUT) {
+    ESP.restart();
+  }
 }
 
 void open_gate() {
@@ -299,16 +348,13 @@ void open_gate() {
 void shut_gate() {
   remote_click();
   shutting();
-  // short delay so ESP can restart to reset HEAP 
-  delay(1000);
-  ESP.restart();
 }
 
-bool int_delay(int ms) {
+bool int_delay(unsigned long ms) {
   GateState start = check_gate_state();
   unsigned long t0 = millis();
 
-  while (millis() - t0 <= (unsigned long)ms) {
+  while (millis() - t0 <= ms) {
     if (check_beacon() || check_ir()) return false;
     if (check_gate_state() != start) return false;
     delay(50);
