@@ -1,6 +1,8 @@
 Gate Keeper - Home Automation
 
+
 Website URL: https://gate-keeper-x14u.onrender.com/
+
 
 This website is designed to showcase the design and implementation of 
 an arduino-based home automation project that will fully automate the 
@@ -20,6 +22,10 @@ This website is designed with the following technology:
   - Node.JS
   - EJS
   - Express
+  - Full mobile response
 
 Automation Project:
   - C++
+  - ESP32
+  - Electrical Design
+  - Mechanical Design
